@@ -41,14 +41,20 @@
 						<th>ID</th>
 						<th>Name</th>
 						<th>Email</th>
-						<th>Age</th>
+						<th>Address</th>
+						<th>Postcode</th>
+						<th>Phone number</th>
+
 					</tr>
 					<c:forEach items="${students}" var="student">
 						<tr>
 							<td>${student.id}</td>
-							<td><a href="/updateStudent">${student.name}</a></td>
+							<td><a href="/viewStudent?studentId=${student.id}">${student.name}</a></td>
 							<td>${student.email}</td>
-							<td>${student.age}</td>
+							<td>${student.address}</td>
+							<td>${student.postcode}</td>
+							<td>${student.phoneNumber}</td>
+
 						</tr>
 					</c:forEach>
 				</table>

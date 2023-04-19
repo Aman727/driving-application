@@ -69,5 +69,13 @@ public class StudentWebController {
 		studentService.updateStudent(id, name, email);
 		return "redirect:/showStudents";
 	}
+	
+	@GetMapping("/viewStudent")
+	public String viewStudent(@RequestParam("studentId") Long id, RedirectAttributes redirectAttributes) {
+		// code to delete the student with the given id
+		Student student = studentService.getStudent(id);
+		redirectAttributes.addFlashAttribute("student", student);
+		return "redirect:/viewStudent"; // redirect to the students list page
+	}
 
 }

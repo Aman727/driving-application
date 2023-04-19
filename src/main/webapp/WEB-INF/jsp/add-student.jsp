@@ -40,13 +40,46 @@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 	<c:url var="add_student_url" value="/addStudent" />
 	<form:form action="${add_student_url}" method="post"
 		modelAttribute="student">
-		<form:label path="name">Student Name: </form:label>
-		<form:input type="text" path="name" />
-		<form:label path="email">Email: </form:label>
-		<form:input type="text" path="email" />
-		<form:label path="dob">Date of birth: </form:label>
-		<form:input type="text" path="dob" />
-		<input type="submit" value="submit" />
+
+
+		<table>
+			<tr>
+				<td><form:label path="name">Student Name: </form:label></td>
+				<td><form:input type="text" path="name" /></td>
+			</tr>
+
+			<tr>
+				<td><form:label path="email">Email </form:label></td>
+				<td><form:input type="text" path="email" /></td>
+			</tr>
+
+			<tr>
+				<td><form:label path="name">Address </form:label></td>
+				<td><form:input type="text" path="address" /></td>
+			</tr>
+
+			<tr>
+				<td><form:label path="name">Postcode </form:label></td>
+				<td><form:input type="text" path="postcode" /></td>
+			</tr>
+
+			<tr>
+				<td><form:label path="name">Phone number </form:label></td>
+				<td><form:input type="text" path="phoneNumber" /></td>
+			</tr>
+
+			<tr>
+				<td><form:label path="dob">Date of birth </form:label></td>
+				<td><form:input type="text" path="dob" /></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="submit" value="submit" /></td>
+			</tr>
+
+		</table>
+
 	</form:form>
 
 	<script

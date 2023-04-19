@@ -20,25 +20,49 @@ public class Student {
 	private Long id;
 	private String name;
 	private String email;
+	private String address;
+	private String postcode;
+	private String phoneNumber;
 	private LocalDate dob;
+	
 
 	@Transient
 	private Integer age;
 
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getPostcode() {
+		return postcode;
+	}
+
+	public void setPostcode(String postcode) {
+		this.postcode = postcode;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+
+	public Student(String name, String email) {
+		this.name = name;
+		this.email = email;
+	}
+
+
+
 	public Student() {
-	}
-
-	public Student(Long id, String name, String email, LocalDate dob) {
-		this.id = id;
-		this.name = name;
-		this.email = email;
-		this.dob = dob;
-	}
-
-	public Student(String name, String email, LocalDate dob) {
-		this.name = name;
-		this.email = email;
-		this.dob = dob;
+		// TODO Auto-generated constructor stub
 	}
 
 	public Long getId() {

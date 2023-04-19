@@ -38,12 +38,48 @@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 	<div class="container">
 		<form action="/updateStudent" method="post">
-			<label for="studentId">Student ID: </label> <input type="text"
-				id="studentId" name="studentId" required> <label for="name">Name:</label>
-			<input type="text" id="name" name="name"> <label for="email">Email:</label>
-			<input type="email" id="email" name="email">
+			
+			
 
-			<button type="submit">Update Student</button>
+		
+		<table>
+			<tr>
+				<td><form:label path="name">Student Name: </form:label></td>
+				<td><form:input type="text" id="name" name="name" /></td>
+			</tr>
+			
+			<tr>
+				<td><form:label path="email">Email </form:label></td>
+				<td><form:input type="text" id="email" name="email" /></td>
+			</tr>
+			
+			<tr>
+				<td><form:label path="name">Address </form:label></td>
+				<td><form:input type="text" id="address" name="address" /></td>
+			</tr>	
+				
+			<tr>	
+				<td><form:label path="name">Postcode </form:label></td>
+				<td><form:input type="text" path="postcode" /></td>
+			</tr>
+			
+			<tr>	
+				<td><form:label path="name">Phone number </form:label></td>
+				<td><form:input type="text" path="phoneNumber" /></td>
+			</tr>	
+				
+			<tr>
+				<td><form:label path="dob">Date of birth </form:label></td>
+				<td><form:input type="text" path="dob" /></td>
+			</tr>	
+				
+			<tr>
+				<td></td>
+				<td><input type="submit" value="submit" /></td>
+			</tr>	
+				
+		</table>
+		
 		</form>
 	</div>
 
